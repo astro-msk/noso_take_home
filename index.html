@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Call Analysis - Luis HVAC Consultation</title>
+    <title>Service Call Analysis - HVAC Consultation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Service Call Recording Analysis</h1>
-            <p class="subtitle">HVAC Repair & Equipment Replacement Consultation</p>
+            <p class="subtitle">Call type: HVAC Repair & Equipment Replacement Consultation</p>
         </header>
 
         <!-- Executive Summary -->
@@ -18,35 +18,45 @@
             <h2 style="border: none; margin-bottom: 20px;">Executive Summary</h2>
             <div class="summary-grid">
                 <div class="summary-item">
-                    <div class="summary-value score-large score-warn">63/100</div> <!-- TODO -->
-                    <div class="summary-label">Overall Compliance</div>
+                    <div class="summary-value score-large score-warn">64/100</div>
+                    <div class="summary-label">Overall Compliance Score</div>
                 </div>
                 <div class="summary-item">
                     <div class="summary-value">~32:17 min</div>
                     <div class="summary-label">Call Duration</div>
                 </div>
-                <div class="summary-item">
-                    <div class="summary-value">5/6</div>  <!-- TODO -->
-                    <div class="summary-label">Opportunities Presented</div>
-                </div>
             </div>
 
             <h3>Key Findings</h3>
             <div class="key-finding">
-                <strong>✅ Major Strength:</strong> Exceptional consultative selling on equipment replacement. Technician prepared 4 detailed heat pump options, educated customer about CA natural gas phase-outs, highlighted $4,000 in rebates, and adapted flexibly to customer preferences (Bosch unit). This is textbook sales execution.
+                <strong>✅ Major Strength:</strong> Exceptional consultative selling on equipment replacement. Technician prepared 4 detailed heat pump options, educated customer about CA natural gas phase-outs, highlighted $X in rebates, and adapted flexibly to customer preferences to change the equipment brand.
             </div>
             <div class="key-finding">
-                <strong>⚠️ Critical Gap:</strong> Technician pressured customer for immediate signature after customer explicitly stated need to discuss with wife. The "waive service charge if you sign today" tactic undermines trust and could jeopardize a $26K+ sale.
+                <strong>⚠️ Critical Gap:</strong> Technician pressured customer for immediate signature after customer explicitly stated need to discuss with wife. The "waive service charge if you sign today" tactic undermines trust and shows rushing.
             </div>
             <div class="key-finding">
-                <strong>❌ Compliance Failures:</strong> No proper introduction (name, company, service explanation) and maintenance plan only mentioned in passing ($200-500/year recurring revenue missed).
+                <strong>❌ Compliance Failures:</strong> No proper introduction (name, company, service explanation) and maintenance plan only mentioned in passing.
             </div>
         </section>
 
         <!-- Compliance Analysis -->
         <section id="compliance">
-            <h2>📊 Compliance Analysis (6 Required Stages)</h2>
-            <p style="color: var(--color-slate-500); margin-bottom: 30px;">Each stage includes the transcript segment and detailed analysis. Click "Show Transcript" to view the conversation. Hover over <span style="background: rgba(33, 128, 141, 0.2); padding: 2px 6px; border-radius: 3px; cursor: help;">highlighted text</span> to see analysis notes.</p>
+            <h2>📊 Compliance Analysis (6 Stages)</h2>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <div style="width: 700px; margin: 60px auto;">
+                <h3 style="text-align:center; margin-bottom:10px; color:white;">Compliance Score Ranking (High to Low)</h3>
+                <canvas id="horizontalChart"></canvas>
+                </div>
+
+                <script src="./scores.js"></script>
+
+            <p class="explain-toggle">
+                Each stage includes the transcript segment and detailed analysis. 
+                Click <span style="color: #FFB347;">"Show Transcript"</span> to view the conversation. 
+                Hover over <span style="color: #FFB347;">highlighted text</span> to see analysis notes.
+            </p>
 
             <!-- Stage 1: Introduction -->
             <div class="compliance-stage">
@@ -54,7 +64,7 @@
                     <div class="stage-title">
                         <span>1. Introduction</span>
                     </div>
-                    <div class="stage-score status-missed">40/100 - MISSED</div> <!-- TODO -->
+                    <div class="stage-score status-needs-improvement">50/100</div> 
                 </div>
 
                 <button class="toggle-transcript-btn" data-target="transcript-stage-1" style="
@@ -77,7 +87,7 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p>Hey, Luis. Got you all done.</span> The reason that took so long is I. I just kind of also built all your equipment options when I was out there too.</p>
+                        <p>Hey, Luis. Got you all done. The reason that took so long is I. I just kind of also built all your equipment options when I was out there too.</p>
                     </div>
 
                     <div class="transcript-segment">
@@ -123,21 +133,20 @@
 
                 <div class="analysis-section">
                     <h4>Analysis</h4>
-                    <p>The technician skipped the introduction protocol. The audio begins mid-conversation with "Hey, Luis. Got you all done." There was no formal greeting, no company name stated, and no explanation of what service was just completed. This might be due to early acquaintance or familiarity with the customer, but this could be a compliance failure that sets an unprofessional tone from the start.</p>
+                    <p>The audio appears to begin mid-conversation after the initial greeting, hence there was no formal greeting, no company name stated, and no explanation of what service was just completed. This might be due to early acquaintance or familiarity with the customer, but this could be a compliance failure that sets an unprofessional tone.</p>
                 </div>
 
                 <div class="analysis-section">
                     <h4>✅ Strengths</h4>
                     <ul>
+                        <li>Informal but friendly approach</li>
                         <li>Used customer's first name (personable, familiar tone)</li>
-                        <li>Informal but friendly approach/li>
                     </ul>
                 </div>
 
                 <div class="analysis-section">
-                    <h4>❌ Improvements Needed</h4>
+                    <h4>🔧 Minor Improvements</h4>
                     <ul>
-                        <li>Could have asked how the customer is doing</li>
                         <li>Missed opportunity to establish professional credibility immediately</li>
                     </ul>
                 </div>
@@ -150,7 +159,7 @@
                     <div class="stage-title">
                         <span>2. Problem Diagnosis</span>
                     </div>
-                    <div class="stage-score status-pass">85/100 - PASS</div> <!-- TODO -->
+                    <div class="stage-score status-pass">90/100</div> 
                 </div>
 
                 <button class="toggle-transcript-btn" data-target="transcript-stage-2" style="
@@ -188,7 +197,7 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p>Right.So when it comes to just what to expect here in the future, <span class="highlight" data-note="Sharing the reality: Clear timeline (1-2 months) before efficiency drops again. Customer knows what to expect."><I would say month to two months.</span> I think we'll start to see. Or even sooner we'll start to see the efficiency drop again.<span class="highlight" data-note="Acknowledges persistent issues that repair doesn't solve mold."> And we still have those mold issues</span>. I did just want to show you some different equipment options.</p>
+                        <p>Right.So when it comes to just what to expect here in the future, <span class="highlight" data-note="Sharing the reality: Clear timeline (1-2 months) before efficiency drops again. Customer knows what to expect.">I would say month to two months.</span> I think we'll start to see. Or even sooner we'll start to see the efficiency drop again.<span class="highlight" data-note="Acknowledges persistent issues that repair doesn't solve mold."> And we still have those mold issues</span>. I did just want to show you some different equipment options.</p>
                     </div>
 
                 </div>
@@ -222,7 +231,7 @@
                     <div class="stage-title">
                         <span>3. Solution Explanation</span>
                     </div>
-                    <div class="stage-score status-needs-improvement">75/100 - NEEDS IMPROVEMENT</div> <!-- TODO -->
+                    <div class="stage-score status-pass">90/100</div>
                 </div>
 
                 <button class="toggle-transcript-btn" data-target="transcript-stage-3" style="
@@ -261,7 +270,7 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p>Yeah, <span class="highlight" data-note="Educational approach: Explains California energy policy changes to help customer make informed long-term decision.">I like the idea. It's just kind of a lot. They want every house to have a 200amp panel, have a bathtub generator. They want every house to have solar, and they want every house to have a heat pump. And so heat pumps Are the next option. Yeah, heat pumps are actually just got introduced some more rebates.</span> So even though those are the best possible system to install, weirdly enough, those actually are getting quite affordable at the moment. I'm used to them being actually our most expensive option. But rebates have been introduced that have made it a lot more reasonable. And then when it comes to the. The two different heating options, I just have two different types of heat pumps that I'm building for you. So let's just look at</p>
+                        <p>Yeah, <span class="highlight" data-note="The technician uses educational approach by explaining California energy policy changes to help customer make informed long-term decision.">I like the idea. It's just kind of a lot. They want every house to have a 200amp panel, have a bathtub generator. They want every house to have solar, and they want every house to have a heat pump. And so heat pumps Are the next option. Yeah, heat pumps are actually just got introduced some more rebates.</span> So even though those are the best possible system to install, weirdly enough, those actually are getting quite affordable at the moment. I'm used to them being actually our most expensive option. But rebates have been introduced that have made it a lot more reasonable. And then when it comes to the. The two different heating options, I just have two different types of heat pumps that I'm building for you. So let's just look at</p>
                     </div>
 
                     <div class="transcript-segment">
@@ -271,7 +280,7 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p>Exactly. And so to start off with, it's always important to realize these are more expensive than investments than your normal investment into a home. So I just wanted you to understand that a lot of our clients do use different monthly options to take care of them. But let's just break down what we do. So let's start off with the like for like we always come with our guarantees. We have some really, really excellent guarantees that really just show you that we're going to do a great job for you. We then start off with our first cost. This is a newest nest thermostat. We can switch this up. I just wanted to just simplify it. Put something in that you guys are used to. It will be just the most modern version. And then we credit this back towards replacement at the very end. So this 549 will be credited back towards you. Then we talk about steps like what we need to do. AC removal, hall away and disposal, heater and removal. This is a really lengthy section. This is like typically roughly one day, this amount of work we remove, safely, demolish and dispose of your furnace, remove safely, remove the refrigerant, demolish and dispose of your ac. And that's I think like a pretty lengthy section.</p>
+                        <p>Exactly. And so to start off with, it's always important to realize these are more expensive than investments than your normal investment into a home. So I just wanted you to understand that a lot of our clients do use different monthly options to take care of them. But let's just break down what we do. So let's start off with the like for like we always come with our guarantees. We have some really, really excellent guarantees that really just show you that we're going to do a great job for you. We then start off with our first cost. <span class="highlight" data-note="The technician emphasized on using the latest technology and also mentions available offers and promotions">This is a newest nest thermostat. We can switch this up. I just wanted to just simplify it. Put something in that you guys are used to. It will be just the most modern version. And then we credit this back towards replacement at the very end. So this 549 will be credited back towards you.</span> Then we talk about steps like what we need to do. AC removal, hall away and disposal, heater and removal. This is a really lengthy section. This is like typically roughly one day, this amount of work we remove, safely, demolish and dispose of your furnace, remove safely, remove the refrigerant, demolish and dispose of your ac. And that's I think like a pretty lengthy section.</p>
                     </div>
 
                     <div class="transcript-segment">
@@ -281,7 +290,7 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p>And then moving on, we'll just get to the first heat pump. Really very similar line items. I'm not going to go through every single one this time. I wanted to pause at this one though. The technology we're talking about with this heat pump is called an inverter. Have you ever heard of an inverter before? Actually, you know what? I saw your mini split. It actually mimics that technology, but in a ducted sense. So that's a ductless heating and cooling system. This one we have that same type of inverter technology where it ramps up and ramps down, except we're just attaching it to the ductwork. So the main difference here just important to realize that it's going to heat and cool a little bit differently. In general, everything is going to be an improvement. Cooling will be significantly better. Usually we're talking like 60% utility bill savings. The thing about heating side, it's just important to note usually they don't absolutely kill it the same way old furnaces do. Old furnaces have flames. So obviously we're going to get really intense temperature coming out. These do heat a little bit less extreme, but still are totally capable of.
+                        <p>And then moving on, we'll just get to the first heat pump. Really very similar line items. I'm not going to go through every single one this time. I wanted to pause at this one though. The technology we're talking about with this heat pump is called an inverter. Have you ever heard of an inverter before? Actually, you know what? I saw your mini split. It actually mimics that technology, but in a ducted sense. So that's a ductless heating and cooling system. This one we have that same type of inverter technology where it ramps up and ramps down, except we're just attaching it to the ductwork. So the main difference here just important to realize that it's going to heat and cool a little bit differently. <span class="highlight" data-note="The technician clearly explain all the benefits of inverter technology">In general, everything is going to be an improvement. Cooling will be significantly better. Usually we're talking like 60% utility bill savings.</span> The thing about heating side, it's just important to note usually they don't absolutely kill it the same way old furnaces do. Old furnaces have flames. So obviously we're going to get really intense temperature coming out. These do heat a little bit less extreme, but still are totally capable of.
                         </p>
                     </div>
 
@@ -289,25 +298,21 @@
 
                 <div class="analysis-section">
                     <h4>Analysis</h4>
-                    <p>The technician explained the repair work (refrigerant recharge, temperature improvements) but the explanation was somewhat rushed and assumed customer technical knowledge. The focus quickly shifted to equipment replacement options rather than thoroughly walking through what was actually done today.</p>
+                    <p>Solid consultative selling with strong product knowledge. The customer appears engaged and receptive, but incomplete thoughts and weak heat pump positioning could create buyer hesitation at decision time. A small suggestion here would be to strengthen heat pump equipment narrative by quantifying ROI explicitly (e.g., "60% savings = $X/year").</p>
                 </div>
 
                 <div class="analysis-section">
                     <h4>✅ Strengths</h4>
                     <ul>
-                        <li>Showed before/after measurements (measurable improvement demonstrated)</li>
-                        <li>Acknowledged quality of workmanship: "Did a really fancy charge there for you"</li>
-                        <li>Honest about limitations of the repair work</li>
+                        <li>Showed great product education along with consultative approach by making sure the customer is aware of different technologies in the equipments</li>
+                        <li>Maintained active customer engagement through the conversation while explaining about different equipment options.</li>
                     </ul>
                 </div>
 
                 <div class="analysis-section">
-                    <h4>🔧 Improvements Needed</h4>
+                    <h4>🔧 Minor Improvements</h4>
                     <ul>
-                        <li>Should have explained what a "fancy charge" means in layman's terms (what specifically was done?)</li>
-                        <li>Could have walked through each repair step methodically</li>
-                        <li>Should have confirmed customer understood what was completed</li>
-                        <li>Rushed through repair explanation to pivot to sales pitch - repair should be fully explained first</li>
+                        <li>The heat pump discussion closed weak, could have added explicit ROI quantification.</li>
                     </ul>
                 </div>
 
@@ -319,7 +324,7 @@
                     <div class="stage-title">
                         <span>4. Upsell Attempts</span>
                     </div>
-                    <div class="stage-score status-pass">95/100 - EXCELLENT</div>
+                    <div class="stage-score status-pass">90/100</div>
                 </div>
 
                 <button class="toggle-transcript-btn" data-target="transcript-stage-4" style="
@@ -338,7 +343,7 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">CUSTOMER</div>
-                        <p><span class="highlight" data-note="Customer objection about side venting. Watch how technician handles this - it's excellent.">Okay. Okay. Yeah. What we don't like about it there is not so much the cabinet is the noise.</span></p>
+                        <p><span class="highlight" data-note="This signals customer objection about side venting.">Okay. Okay. Yeah. What we don't like about it there is not so much the cabinet is the noise.</span></p>
                     </div>
                     
                     <div class="transcript-segment">
@@ -353,7 +358,7 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p><span class="highlight" data-note="EXCELLENT objection handling: Immediately offers alternative (Bosch with upward venting). Flexible, customer-centric response.">I. I can build a form of inverter that does do that. The brand is Bosch. Very highly reviewed. Mostly actually highly reviewed from technicians, which is very cool. Technicians love working on them because they're very reliable. But I don't know where the Bosch would end up. But I do think it would be Roughly in that same area. The only thing we can find out with Bosch in a second. But you see how this says Energy Star, high heat. Mm. Whenever you see Energy Star, that actually can qualify you for one further rebate that you have to deal with completely on your own. We can't help you. It's a tax cut rebate. And usually if you qualify for it, it's either a thousand dollars or $2,000. If we don't have Energy Star on it, you can't have that rebate.
+                        <p><span class="highlight" data-note="Excellent objection handling, Immediately offers alternative (Bosch with upward venting). Flexible, customer-centric response.">I. I can build a form of inverter that does do that. The brand is Bosch. Very highly reviewed. Mostly actually highly reviewed from technicians, which is very cool. Technicians love working on them because they're very reliable. But I don't know where the Bosch would end up. But I do think it would be Roughly in that same area. The only thing we can find out with Bosch in a second. But you see how this says Energy Star, high heat. Mm. Whenever you see Energy Star, that actually can qualify you for one further rebate that you have to deal with completely on your own. We can't help you. It's a tax cut rebate. And usually if you qualify for it, it's either a thousand dollars or $2,000. If we don't have Energy Star on it, you can't have that rebate.
                         </span></p>
                     </div>
 
@@ -374,42 +379,35 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p><span class="highlight" data-note="Good: Explains financing options clearly with specific numbers. Makes $26K investment feel accessible.">So financing. We have a couple different options. We have 60 months at 5.99%. That's about $335 a month after the rebates. We also have 12 months same as cash. And then we have a 180 month option if you want to go longer term.</span></p>
+                        <p><span class="highlight" data-note="The technician explains financing options clearly with specific numbers. This makes the hugh investment feel accessible.">So financing. We have a couple different options. We have 60 months at 5.99%. That's about $335 a month after the rebates. We also have 12 months same as cash. And then we have a 180 month option if you want to go longer term.</span></p>
                     </div>
 
                     <div class="transcript-segment">
                         <div class="speaker">CUSTOMER</div>
-                        <p>Okay.</span></p>
+                        <p>Okay.</p>
                     </div>
 
                 </div>
 
                 <div class="analysis-section">
                     <h4>Analysis</h4>
-                    <p><strong>This is exceptional consultative selling.</strong> The technician proactively prepared FOUR detailed equipment options while on-site (showing preparation and initiative). He educated the customer about California's natural gas phase-outs, heat pump technology benefits, and substantial rebate opportunities ($4,000 total). When the customer expressed preference for upward-venting units, he immediately adapted by offering a Bosch alternative. This is textbook sales execution: educate first, present options, respond to objections flexibly, remove pressure.</p>
+                    <p>When the customer expressed preference for upward-venting units due to noise concerns, the technician immediately adapted to customer preferences by offering a Bosch alternative and also offered an upsell of a grill option that could reduce the inverter noise by 20%. This was a great sales execution: educate first, present options, respond to objections flexibly, and reach a decision. The technician also offered multiple financing plans in details, which was critical as this would be an enabler for purchasing new equipment.</p>
                 </div>
 
                 <div class="analysis-section">
-                    <h4>✅ Outstanding Strengths</h4>
+                    <h4>✅ Strengths</h4>
                     <ul>
-                        <li><strong>Preparation:</strong> Built 4 equipment options while on-site ("I just kind of also built all your equipment options")</li>
-                        <li><strong>Education approach:</strong> Explained CA natural gas phase-outs, state energy goals, heat pump technology</li>
-                        <li><strong>Financial transparency:</strong> Highlighted $2,500 SVCE + $1,500 TECH rebates ($4,000 total savings)</li>
-                        <li><strong>Technology benefits:</strong> Inverter technology, 60% cooling savings, Energy Star tax credits</li>
-                        <li><strong>Customer-responsive:</strong> Modified estimate to Bosch when customer preferred upward venting</li>
-                        <li><strong>Addressed concerns:</strong> Noise (inverter quietness, upgraded grille), placement (attic vs closet trade-offs)</li>
-                        <li><strong>Consultative not pushy:</strong> "I just wanted you to understand" - education-first approach</li>
-                        <li><strong>Rapport building:</strong> Personal connection (cats/dogs conversation with Michelangelo)</li>
-                        <li><strong>Detailed financing:</strong> Multiple options explained clearly with monthly payment calculations</li>
+                        <li>Responsive by modifying estimate promptly to Bosch when customer preferred upward venting</li>
+                        <li>Addressed customer concerns about noise by mentioning inverter quietness, upgraded grill.</li>
+                        <li>Education-first approach" - I just wanted you to understand"</li>
+                        <li>Mentioned detailed financing options by clear explaination with monthly payment calculations</li>
                     </ul>
                 </div>
 
                 <div class="analysis-section">
                     <h4>🔧 Minor Improvements</h4>
                     <ul>
-                        <li>Could have asked budget qualifying questions earlier to narrow options faster</li>
-                        <li>Some explanations were lengthy - more frequent comprehension checks would help</li>
-                        <li>Could have provided a simpler side-by-side comparison summary at the end</li>
+                        <li>Some explanations were lengthy(hence the transcript was shortened at places) - more frequent comprehension checks would help</li>
                     </ul>
                 </div>
 
@@ -421,7 +419,7 @@
                     <div class="stage-title">
                         <span>5. Maintenance Plan Offer</span>
                     </div>
-                    <div class="stage-score status-missed">30/100 - MISSED</div>
+                    <div class="stage-score status-missed">30/100</div>
                 </div>
 
                 <button class="toggle-transcript-btn" data-target="transcript-stage-5" style="
@@ -439,38 +437,37 @@
                 <div id="transcript-stage-5" class="stage-transcript-content" style="display: none; margin-bottom: 25px;">
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p><span class="highlight" data-note="CRITICAL MISS: Only mention of maintenance plan, buried in warranty discussion. Never explicitly offered enrollment. Should have asked: 'Would you like to enroll in our maintenance program?' with clear pricing and benefits. $200-500/year recurring revenue missed."> If you're on this maintenance program with us, we actually completely match the manufacturer warranties it's essentially 10 years parts and 10 year manufacturer warranty. </span></p>
+                        <p>The thing I like to make sure my clients understand is serviceability,<span class="highlight" data-note="Mentions maintenance but gives no concrete plan details — no cost, frequency, or benefits explained."> maintenance</span>, and efficiency.</p>
+                    </div>
+                    <div class="transcript-segment">
+                        <div class="speaker">TECHNICIAN</div>
+                        <p><span class="highlight" data-note="Only mention of maintenance program appears within warranty discussion — not a clear offer. Missed strong sales opportunity.">If you're on this maintenance program with us, we actually completely match the manufacturer warranties — it's essentially 10 years parts and 10 years manufacturer warranty.</span></p>
                     </div>
                 </div>
 
                 <div class="analysis-section">
                     <h4>Analysis</h4>
-                    <p><strong>Critical miss.</strong> The technician mentioned the maintenance program ONLY in the context of extending manufacturer warranties to 10 years parts + labor. He never explicitly offered enrollment, never explained the program benefits, cost, or value proposition. This was a buried mention, not a proper offer. Given the customer's current system has mold issues and is old, this was a perfect maintenance plan candidate.</p>
+                    <p> Although the technician emphasized “serviceability, maintenance, and efficiency,” he didn’t provide any concrete maintenance plan details such as pricing, inclusions, or how to enroll. The only follow-up mention was buried within a warranty discussion — not a clear offer. He mentioned the maintenance program only in the context of extending manufacturer warranties to 10 years parts and labor. Instead, mentioning the maintenance program like "Our customers on maintenance plans save an average of $X per year in emergency repairs and extend their system life by Y years.". This approach has an upper hand as quantified benefits sell better than abstract benefits.</p>
                 </div>
 
                 <div class="analysis-section">
                     <h4>✅ Minor Positives</h4>
                     <ul>
-                        <li>Mentioned maintenance program extends warranties (10 year parts + labor)</li>
-                        <li>Positioned it as valuable in context of equipment purchase</li>
+                        <li>Positions himself as technically credible and customer-oriented by linking reliability with maintenance and efficiency</li>
                     </ul>
                 </div>
 
                 <div class="analysis-section">
-                    <h4>❌ Critical Failures</h4>
+                    <h4>❌ Improvements Needed</h4>
                     <ul>
-                        <li><strong>Never explicitly offered:</strong> Should have asked "Would you like to enroll in our maintenance program?"</li>
-                        <li><strong>No pricing disclosed:</strong> Never mentioned monthly/annual cost</li>
-                        <li><strong>No value proposition:</strong> Didn't detail what's included (annual tune-ups, priority service, discounts)</li>
-                        <li><strong>No positioning for current system:</strong> Should have offered maintenance on existing system while customer decides on replacement</li>
-                        <li><strong>Missed emotional moment:</strong> Customer concerned about noise and future problems - perfect time to offer peace-of-mind maintenance</li>
-                        <li><strong>Buried in equipment pitch:</strong> Only mentioned as warranty extension, not as standalone service</li>
+                        <li>There was no clear offer or direct question about enrolling in the maintenance plan.</li>
+                        <li>The plan details such as pricing, service frequency, and included benefits were not explained</li>
                     </ul>
                 </div>
 
                 <div class="analysis-section">
                     <h4>💵 Revenue Impact</h4>
-                    <p><strong>Estimated $200-500/year recurring revenue opportunity missed.</strong> Maintenance plans are high-margin, create customer stickiness, and would address this customer's current mold and efficiency concerns.</p>
+                    <p><strong>Estimated $200-500/year recurring revenue opportunity missed (based on typical HVAC maintenance plans)</strong> Maintenance plans are high-margin, create customer stickiness, and would address this customer's current mold and efficiency concerns.</p>
                 </div>
 
             </div>
@@ -481,7 +478,7 @@
                     <div class="stage-title">
                         <span>6. Closing</span>
                     </div>
-                    <div class="stage-score status-needs-improvement">50/100 - PROBLEMATIC</div>
+                    <div class="stage-score status-missed">30/100</div>
                 </div>
 
                 <button class="toggle-transcript-btn" data-target="transcript-stage-6" style="
@@ -505,12 +502,12 @@
 
                     <div class="transcript-segment">
                         <div class="speaker">TECHNICIAN</div>
-                        <p>Yeah. So how about this? Let me bring the estimates down to just two of them. I'll just eliminate this one, eliminate that one. And the only thing <span class="highlight" data-note="CRITICAL FAILURE: Pressuring for immediate commitment AFTER customer set boundary. This 'waive service charge' tactic is manipulative and undermines 25 minutes of trust-building. HIGH RISK of losing $26K sale.">I just want to make sure is clear on my end it would be so much easier if I didn't have to charge for the repair today. And if we actually just basically considered it as a complimentary thing for you. So if we did feel comfortable with signing what that would just look like on your end would just be a $1,000 down payment. The other thing is we can see what options you qualify for in regards to financing. And if that's the case, if we have financing, then I don't even need a down payment today.</span> We would just do just the financing side of it. And we do come with. Every contractor that's reputable comes with this guarantee here. So as you're talking to your wife, anything weird comes up, we even have this notice right here. So we always have a reputable three day right to cancel.</p>
+                        <p>Yeah. So how about this? Let me bring the estimates down to just two of them. I'll just eliminate this one, eliminate that one. And the only thing <span class="highlight" data-note="CRITICAL: Pressuring for immediate commitment AFTER customer set boundary. This 'waive service charge' tactic is manipulative and weakens 25 minutes of trust-building.">I just want to make sure is clear on my end it would be so much easier if I didn't have to charge for the repair today. And if we actually just basically considered it as a complimentary thing for you. So if we did feel comfortable with signing what that would just look like on your end would just be a $1,000 down payment. The other thing is we can see what options you qualify for in regards to financing. And if that's the case, if we have financing, then I don't even need a down payment today.</span> We would just do just the financing side of it. And we do come with. Every contractor that's reputable comes with this guarantee here. So as you're talking to your wife, anything weird comes up, we even have this notice right here. So we always have a reputable three day right to cancel.</p>
                     </div>
 
                     <div class="transcript-segment">
                         <div class="speaker">CUSTOMER</div>
-                        <p><span class="highlight" data-note="Customer rejects pressure tactic and restates boundary. Good for customer. Bad for technician's credibility.">No, we won't do that today. Just send me the, I'll talk to her and then we'll make a decision.</span></p>
+                        <p><span class="highlight" data-note="Customer rejects pressure tactic and restates boundary">No, we won't do that today. Just send me the, I'll talk to her and then we'll make a decision.</span></p>
                     </div>
 
                     <div class="transcript-segment">
@@ -531,235 +528,85 @@
 
                 <div class="analysis-section">
                     <h4>Analysis</h4>
-                    <p><strong>The closing was problematic and could damage the sale.</strong> After the customer clearly stated "I like to speak with my wife about all the options," the technician attempted to pressure for immediate commitment. The tactic of waiving today's service charge contingent on signing today undermines trust and contradicts the consultative approach used throughout the call. The mention of "three day right to cancel" actually reinforces the pressure rather than relieving it.</p>
+                    <p>The closing was problematic and could damage customer relationship and likelihood of acceptance, despite proposal being sent. After the customer clearly stated "I like to speak with my wife about all the options," the technician attempted to pressure for immediate commitment. The tactic of waiving today's service charge contingent on signing today undermines trust and contradicts the consultative approach used throughout the call. At closing, the technician could have asked when would be a good time for a follow-up call, as this will create accountability.</p>
                 </div>
 
                 <div class="analysis-section">
-                    <h4>✅ Positive Elements</h4>
+                    <h4>✅ Minor Positives</h4>
                     <ul>
-                        <li>Agreed to email estimates for customer review</li>
-                        <li>Narrowed options to two as customer requested (Bryant and Bosch heat pumps)</li>
-                        <li>Mentioned three-day right to cancel (legal protection)</li>
-                        <li>Processed payment for today's service call professionally</li>
+                        <li>Focused on two system options (Bryant and Bosch heat pumps) as requested by the customer.</li>
+                        <li>Clearly mentioned the three-day cancellation period, ensuring the customer understood their rights.</li>
                     </ul>
                 </div>
 
                 <div class="analysis-section">
-                    <h4>❌ Critical Failures</h4>
+                    <h4>❌ Improvements needed</h4>
                     <ul>
-                        <li><strong>Ignored boundary:</strong> Customer explicitly said "I like to speak with my wife" - should have immediately respected this</li>
-                        <li><strong>Pressure tactic:</strong> "It would be so much easier if I didn't have to charge for the repair today" contingent on signing - this is manipulative</li>
-                        <li><strong>Contradicts stated intent:</strong> Pushed for $1,000 down payment "today" despite customer's clear need to discuss with spouse</li>
-                        <li><strong>Erodes trust:</strong> After 28 minutes of consultative selling, this pressure undermines goodwill built</li>
-                        <li><strong>No follow-up plan:</strong> Didn't confirm when he'd follow up or when customer needs to decide</li>
-                        <li><strong>No gratitude:</strong> Didn't thank customer for their time or business</li>
-                        <li><strong>Missed joint decision opportunity:</strong> Should have offered to present to both spouses or provided materials to make discussion easier</li>
+                        <li>Did not respect the customer’s wish to discuss with their spouse and waiving repair charges only if a decision was made immediately created pressure.</li>
+                        <li>The pressured close weakened the trust built earlier in the call</li>
+                        <li>No clear follow-up plan or next steps were discussed.</li>
+                        <li>The call ended without a thank-you or acknowledgment of the customer’s time.</li>
                     </ul>
                 </div>
-
-                <div class="analysis-section">
-                    <h4>⚠️ Risk Assessment</h4>
-                    <p><strong>HIGH RISK:</strong> This closing approach could result in customer discomfort and lost sale. Customer may feel pressured and reconsider entire proposal. The consultative approach built trust for 25 minutes; this closing eroded it in 3 minutes.</p>
-                </div>
-
             </div>
         </section>
 
         <!-- Sales Insights -->
         <section id="sales-insights">
-            <h2>💡 Sales Insights & Opportunities</h2>
+            <h2>Sales Insights & Opportunities</h2>
 
             <h3>Opportunities Successfully Pursued</h3>
 
             <div class="sales-opportunity">
                 <div class="opportunity-header">
-                    <div class="opportunity-title">Heat Pump Replacement System</div>
-                    <div class="opportunity-value">$26,422</div>
+                    <div class="opportunity-title">HVAC equipment installation</div>
+                    <div class="opportunity-value">$25,000-$30,000</div>
                 </div>
-                <p><strong>Status:</strong> Active - Proposal Sent (Bryant or Bosch options)</p>
+                <p><strong>Status:</strong> Active - Proposal Sent - inverter options</p>
                 <p><strong>Customer Engagement:</strong> High - customer asked detailed questions about financing, noise reduction, venting options, installation timeline</p>
-                <p><strong>What Worked:</strong> Customer showed strong interest in environmental benefits (no future gas leaks), efficiency (60% cooling savings), and noise reduction (inverter technology). Technician adapted to customer preference by offering Bosch with upward venting.</p>
-                <p><strong>Rebates Highlighted:</strong> $2,500 SVCE + $1,500 TECH + potential $1,000-2,000 Energy Star tax credit = up to $6,000 in savings</p>
-                <p><span class="timestamp">18:30</span> Customer expresses interest<br>
-                <span class="timestamp">22:45</span> Customer narrows to two heat pump options</p>
+                <p><strong>What Worked:</strong> Customer showed strong interest in environmental benefits and convenience (no future gas leaks), efficiency (60% cooling savings), and noise reduction (inverter technology). Technician adapted to customer preference by offering Bosch with upward venting and highlighted the available rebates</p>
             </div>
 
             <div class="sales-opportunity">
                 <div class="opportunity-header">
-                    <div class="opportunity-title">Financing (Enabler for Purchase)</div>
+                    <div class="opportunity-title">Financing - Enabler for purchase</div>
                     <div class="opportunity-value">Critical</div>
                 </div>
                 <p><strong>Status:</strong> Successfully Presented</p>
                 <p><strong>Options Explained:</strong> 60-month at 5.99% ($335/mo), 12-month same-as-cash, 180-month longer term</p>
                 <p><strong>Customer Engagement:</strong> Customer asked specific questions about monthly payments and payoff scenarios</p>
                 <p><strong>What Worked:</strong> Clear explanation of payment options, calculation of monthly amounts, flexibility in down payment requirements</p>
-                <p><span class="timestamp">21:30</span> Presents financing options<br>
-                <span class="timestamp">22:20</span> Calculates monthly payments</p>
             </div>
 
-            <div class="sales-opportunity">
-                <div class="opportunity-header">
-                    <div class="opportunity-title">Duct Sealing Service</div>
-                    <div class="opportunity-value">$1,500-3,000</div>
-                </div>
-                <p><strong>Status:</strong> Mentioned (required for HERS test for rebates)</p>
-                <p><strong>Context:</strong> Technician mentioned duct sealing multiple times in context of HERS testing required for TECH rebate qualification</p>
-                <p><strong>Missed Positioning:</strong> Never positioned duct sealing as standalone service to improve CURRENT system performance while customer decides on replacement</p>
-                <p><span class="timestamp">13:45</span> Mentions duct sealing promotion for HERS test</p>
-            </div>
-
-            <div class="sales-opportunity">
-                <div class="opportunity-header">
-                    <div class="opportunity-title">Attic System Relocation</div>
-                    <div class="opportunity-value">+$4,000</div>
-                </div>
-                <p><strong>Status:</strong> Discussed and Declined by Customer</p>
-                <p><strong>Customer Inquiry:</strong> Customer asked about moving system to attic due to noise concerns</p>
-                <p><strong>Technician Response:</strong> Appropriately explained trade-offs (reduced serviceability, efficiency impact, $4,000+ cost). Customer decided to keep in closet with quieter inverter system instead.</p>
-                <p><strong>Handling:</strong> Excellent - honest about pros/cons, customer made informed decision</p>
-                <p><span class="timestamp">19:30</span> Customer asks about attic relocation<br>
-                <span class="timestamp">20:15</span> Explains cost and trade-offs</p>
-            </div>
-
-            <h3>❌ Missed Opportunities</h3>
+            <h3>Missed Opportunities</h3>
 
             <div class="sales-opportunity" style="border-color: var(--color-error);">
                 <div class="opportunity-header">
                     <div class="opportunity-title">Maintenance Plan Enrollment</div>
-                    <div class="opportunity-value">$200-500/year</div>
+                    <div class="missed-value">Missed recurring revenue</div>
                 </div>
-                <p><strong>Status:</strong> NOT OFFERED (only mentioned in passing)</p>
-                <p><strong>Why This is Critical:</strong> This customer's system has mold issues, is old, and just received a "band-aid" repair expected to last 1-2 months. This is a PERFECT maintenance plan candidate.</p>
+                <p><strong>Status:</strong> Mentioned only in passing but never presented as a standalone offer with pricing, benefits, or enrollment process</p>
                 <p><strong>Revenue Impact:</strong> Recurring annual revenue missed. Maintenance plans have high margins and create customer stickiness.</p>
-                <p><strong>What Should Have Happened:</strong></p>
+                <p><strong>Possible Actions:</strong></p>
                 <ul>
                     <li>Explicit offer: "Would you like to enroll in our maintenance program?"</li>
-                    <li>Value proposition: Annual tune-ups, priority service, discounts on repairs</li>
+                    <li>Value proposition for customer: Annual tune-ups, priority service, discounts on repairs</li>
                     <li>Peace-of-mind positioning given customer's concerns about noise and reliability</li>
-                    <li>Could have offered maintenance on CURRENT system while customer decides on replacement</li>
                 </ul>
-                <p><span class="timestamp">11:45</span> Only mention (buried in warranty discussion)</p>
             </div>
 
-            <h3>🚩 Missed Customer Signals</h3>
-
-            <div class="missed-signal">
-                <p><strong>Signal:</strong> Customer works from home ("I can't work from anywhere else but your home")</p>
-                <p><strong>Implication:</strong> High priority on quiet, reliable HVAC. Downtime during installation is very disruptive to work.</p>
-                <p><strong>How to Leverage:</strong> Could have emphasized fast installation timeline, offered temporary cooling solutions during install, highlighted scheduling flexibility to work around customer's work schedule.</p>
-                <p><span class="timestamp">01:45</span></p>
-            </div>
-
-            <div class="missed-signal">
-                <p><strong>Signal:</strong> Customer concerned about noise multiple times</p>
-                <p><strong>Implication:</strong> Noise is a major pain point driving decision-making.</p>
-                <p><strong>How to Leverage:</strong> Technician did address this with inverter technology and upgraded grille (good!), but could have offered sound testing, emphasized decibel ratings more explicitly, or provided noise guarantees.</p>
-                <p><span class="timestamp">19:00</span> <span class="timestamp">20:45</span></p>
-            </div>
-
-            <div class="missed-signal">
-                <p><strong>Signal:</strong> Customer has mini-split system (already familiar with inverter technology)</p>
-                <p><strong>Implication:</strong> Tech-savvy customer who appreciates efficiency technology. No need for basic education.</p>
-                <p><strong>How Handled:</strong> Technician recognized this and adjusted explanation - excellent adaptation!</p>
-                <p><span class="timestamp">14:15</span></p>
-            </div>
-
-            <div class="missed-signal">
-                <p><strong>Signal:</strong> Customer interested in environmental aspects (asked about gas phase-outs, heat pumps)</p>
-                <p><strong>Implication:</strong> Values sustainability and forward-thinking solutions.</p>
-                <p><strong>How to Leverage:</strong> Could have emphasized carbon footprint reduction, alignment with California climate goals, long-term environmental impact. This was touched on but not fully leveraged.</p>
-                <p><span class="timestamp">06:00</span></p>
-            </div>
-
-            <div class="missed-signal">
-                <p><strong>Signal:</strong> Customer wants to discuss with wife (joint decision-making)</p>
-                <p><strong>Implication:</strong> This is a household decision, not individual.</p>
-                <p><strong>Critical Failure:</strong> Technician pressured for immediate commitment instead of respecting this boundary. Should have asked: "Are there specific concerns your wife might have that I can address now?" or offered to present to both together.</p>
-                <p><span class="timestamp">23:30</span></p>
-            </div>
-
-            <div class="missed-signal">
-                <p><strong>Signal:</strong> Customer had heat pumps before ("20 years ago")</p>
-                <p><strong>Implication:</strong> Already comfortable with technology, no education barrier.</p>
-                <p><strong>How to Leverage:</strong> Could have focused on how heat pump technology has dramatically improved in 20 years (inverter tech, efficiency gains, quieter operation, rebates). This would reinforce that modern heat pumps are vastly better than what customer experienced.</p>
-                <p><span class="timestamp">18:50</span></p>
-            </div>
         </section>
 
-        <!-- Coaching Recommendations -->
         <section id="coaching">
-            <h2>📋 Coaching Recommendations</h2>
 
-            <h3>🔴 Priority 1: Critical Behavior Changes</h3>
+            <h3>Overall Performance Assessment</h3>
 
             <div class="coaching-note">
-                <strong>NEVER pressure after customer sets a boundary</strong>
-                <p>When customer said "I like to speak with my wife," the conversation should have immediately shifted to: "Absolutely, this is an important decision. I'll email you both options. Is there anything specific you'd like me to clarify before you discuss with your wife?" The pressure tactic ("waive service charge if you sign today") after this boundary was set is a serious trust violation that could lose the sale entirely.</p>
-                <p><strong>Action:</strong> Role-play boundary recognition and respectful next steps. This is non-negotiable.</p>
+                <strong>Technician Profile:</strong> Skilled salesperson with excellent product knowledge and a consultative approach. Strong in rapport-building, technical explanation, and flexibility. Minimal gaps observed in compliance protocols during introduction and closing techniques. A small amount of coaching on opening and closing would help this technician deliver a perfect sales pitch.
             </div>
 
             <div class="coaching-note">
-                <strong>Always start with proper introduction</strong>
-                <p>Every service call must begin with: "Hello, I'm [Name] from [Company]. I just completed [service] on your [system]. How are you doing today?" This establishes professionalism and credibility immediately. Starting mid-conversation ("Hey Luis, got you all done") is a compliance failure.</p>
-                <p><strong>Action:</strong> Create opening script and practice until it's automatic.</p>
-            </div>
-
-            <div class="coaching-note">
-                <strong>Explicitly offer maintenance plans - don't bury them</strong>
-                <p>The maintenance plan was mentioned once in the context of warranty extensions. This should be a separate, explicit offer with clear value proposition: "We also offer a maintenance program that includes [X, Y, Z] for [price]/year. Given your system's age and current mold issues, this would give you peace of mind while you decide on replacement. Would you like to enroll?"</p>
-                <p><strong>Revenue Impact:</strong> $200-500/year recurring revenue missed on this call alone. Across all calls, this adds up to significant lost revenue.</p>
-            </div>
-
-            <h3>🟡 Priority 2: Continue These Strengths</h3>
-
-            <div class="coaching-note">
-                <strong>Consultative selling approach is excellent - maintain this</strong>
-                <p>The technician's approach to equipment sales was outstanding: prepared multiple options, educated about technology and rebates, adapted to customer preferences, explained financing clearly. This is exactly the right approach. The problem was ONLY in the closing - everything leading up to it was great.</p>
-                <p><strong>Action:</strong> Document this call's upsell approach as training example (minus the closing).</p>
-            </div>
-
-            <div class="coaching-note">
-                <strong>Transparency about repair limitations builds trust</strong>
-                <p>Calling the repair a "band-aid" and setting 1-2 month expectations was honest and built credibility. Customers appreciate transparency. This positions the technician as trustworthy advisor, not pushy salesperson.</p>
-                <p><strong>Action:</strong> Reinforce this behavior - honesty sells better than over-promising.</p>
-            </div>
-
-            <div class="coaching-note">
-                <strong>Flexibility in responding to objections</strong>
-                <p>When customer expressed concern about side-venting creating wind, technician immediately offered Bosch alternative with upward venting. This customer-first flexibility is excellent sales technique.</p>
-                <p><strong>Action:</strong> Continue adapting to customer preferences rather than pushing single solution.</p>
-            </div>
-
-            <h3>🟢 Priority 3: Fine-Tuning</h3>
-
-            <div class="coaching-note">
-                <strong>Ask budget qualifying questions earlier</strong>
-                <p>Presenting 4 detailed options is great, but asking "What budget range are you considering?" early could narrow focus faster and make conversation more efficient.</p>
-            </div>
-
-            <div class="coaching-note">
-                <strong>Check for comprehension more frequently</strong>
-                <p>Some explanations (natural gas phase-outs, inverter technology, financing) were lengthy. Pause every 2-3 minutes to ask: "Does that make sense?" or "Any questions on that?" This ensures customer is following along.</p>
-            </div>
-
-            <div class="coaching-note">
-                <strong>Quantify peace-of-mind value</strong>
-                <p>When discussing maintenance plans: "Our customers on maintenance plans save an average of $X per year in emergency repairs and extend their system life by Y years." Quantified benefits sell better than abstract benefits.</p>
-            </div>
-
-            <div class="coaching-note">
-                <strong>Confirm follow-up timeline explicitly</strong>
-                <p>At closing, should have said: "I'll email both options today. When would be a good time for me to follow up - 2-3 days? A week?" This creates accountability and shows respect for customer's process.</p>
-            </div>
-
-            <h3>📊 Overall Performance Assessment</h3>
-
-            <div class="coaching-note">
-                <strong>Technician Profile:</strong> Skilled salesperson with excellent product knowledge and consultative approach. Strong at rapport-building, technical explanation, and flexibility. Critical gaps in compliance protocols (introduction) and closing techniques (respecting boundaries). With coaching on opening and closing, this technician could be top performer.
-            </div>
-
-            <div class="coaching-note">
-                <strong>Call Outcome Prediction:</strong> Moderate-to-high close probability IF customer doesn't feel pressured by closing. The $26K heat pump proposal is well-positioned with strong value proposition (rebates, efficiency, environmental benefits). Customer engaged positively throughout. The closing pressure is the only risk factor. Follow-up approach will be critical.
+                <strong>Call Outcome Prediction:</strong> Moderate-to-high close probability. The heat pump proposal is well-positioned with strong value proposition like rebates, efficiency, and environmental benefits. Customer engaged positively throughout the conversation. The closing pressure is the only risk factor. Follow-up approach will be critical.
             </div>
         </section>
 

@@ -1,5 +1,6 @@
 # NOSO Labs Take home challenge
 This repository contains my submission for the NOSO Labs service call analysis take-home assignment.
+Page link: [View Web App](https://astro-msk.github.io/noso_take_home/)
 
 ## Project Overview
 I built a static web application to present my analysis of an HVAC service call recording. The application displays call transcript analysis, compliance scoring across 6 stages, and sales insights
